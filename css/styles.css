@@ -68,7 +68,6 @@ nav .container {
 
 .menu li {
     display: inline-block;
-    color: #808080;
     text-transform: uppercase;
     list-style: none;
     font-size: 1.2rem;
@@ -77,8 +76,18 @@ nav .container {
     padding: .64rem;
 }
 
+.menu li a {
+    color: #808080;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.menu li a:not(.active):hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .menu .active {
-    color: #FFF;
+    color: #FFF!important;
 }
 
 .menu > li:nth-of-type(4) {
@@ -165,39 +174,6 @@ nav .container {
     display: block;
 }
 
-/* Start Responsive Navbar */
-
-    /* @media(max-width: 920px) {
-        .nav-toggler {
-            display: block;
-        }
-
-        .menu {
-            display: none;
-            height: 0;
-            transition: .5s all;
-        }
-        
-        .menu li {
-            display: block;
-            width: 8.7rem;
-        }
-
-        .menu ul {
-            left: 7rem;
-            top: 2.3rem;
-        }
-
-        .menu ul li {
-            width: 100%;
-        }
-
-        .menu.active-menu {
-            display: block;
-            height: auto;
-        }
-    } */
-
 /* End Navigation bar */
 
 /* Start Header */
@@ -218,6 +194,7 @@ header section.slide1 {
 
 header section.slide2 {
     background-image: url(../images/header-2.jpg);
+    background-position: center;
 }
 
 header section {
@@ -799,4 +776,107 @@ footer .container > * {
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: .1rem;
+}
+
+
+/* About Page */
+
+header.about-header {
+    height: 80%;
+}
+
+header.about-header section {
+    height: 100%;
+}
+
+header.about-header .slick-list,header.about-header .slick-track {
+    height: 100%;
+}
+
+header.about-header .slick-arrow {
+    display: none!important;
+}
+
+header.about-header .slick-slider {
+    height: 100%
+}
+
+header.about-header .container {
+    margin: 11.8% auto;
+}
+
+section.mission-history {
+    display: flex;
+    flex-direction: column;
+    height: 86.5rem;
+}
+
+section.mission, section.company-history {
+    display: flex;
+    width: 100%;
+    height: 43.35rem;
+}
+
+.mission-history-image, .mission-history-text {
+    width: 50%;
+    height: 100%;
+}
+
+.mission-history-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mission-history-text p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    width: 43rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mission-history-text ,.blk-heading {
+    font-size: 2.5rem;
+}
+
+section.mission-history img {
+    width: 100%;
+    height: 43.35rem;
+}
+
+main.about-services {
+    padding: 10rem 0;
+    background: #fff;
+}
+
+div.about-card {
+    padding: 0;
+    overflow: hidden;
+    transition: .3s all;
+}
+
+.about-teste .info {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.about-teste .review {
+    text-align: center;
+    padding: 1rem;
+}
+
+.about-teste .card .info img {
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+    transition: .3s all;
+}
+
+div.about-card:hover img {
+    transform: scale(1.2, 1.2);
 }
