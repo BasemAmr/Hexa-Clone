@@ -845,7 +845,7 @@ section.mission, section.company-history {
 
 section.mission-history img {
     width: 100%;
-    height: 43.35rem;
+    height: 43.2rem;
 }
 
 main.about-services {
@@ -879,4 +879,42 @@ div.about-card {
 
 div.about-card:hover img {
     transform: scale(1.2, 1.2);
+}
+
+.continue-read, .read-more {
+    padding: 1.5rem 2rem;
+    background: #e74208;
+    border: none;
+    border-radius: .5rem;
+    letter-spacing: .2rem;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.continue-read:hover{
+    background-color: #F46131;
+}
+
+.article-date {
+    color: #b3b3b3;
+    letter-spacing: .2rem;
+    margin: 0;
+}
+
+section.mission-history.toggeled-section {
+    display: none;
+}
+
+.read-more {
+    width: 100%;
+    padding: 5rem;
+    font-size: 2rem;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.read-more:hover {
+    color: #fff;
+    background: #e74208;
 }
