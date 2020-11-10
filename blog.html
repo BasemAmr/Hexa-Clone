@@ -34,7 +34,7 @@
                     </ul>
                 </li>
                 <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -175,7 +175,7 @@
         $(document).ready(function(){
             $('.about-slider').slick();
             $('.read-more').click(()=>{
-                    $(".toggeled-section").toggle('slow');
+                    $(".toggeled-section").fadeIn('slow');
                     $('.read-more').fadeOut('fast')
             });
         })

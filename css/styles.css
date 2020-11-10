@@ -520,11 +520,11 @@ main.services .main-paragraph {
 
 .teste {
     background: #f8f9fa;
-    padding: 5rem 0;
+    padding: 5rem 0 10rem 0;
 }
 
 .teste .container .cards {
-    margin-top: 10rem;
+    margin: 10rem 0 5rem 0;
 }
 
 .card {
@@ -917,4 +917,118 @@ section.mission-history.toggeled-section {
 .read-more:hover {
     color: #fff;
     background: #e74208;
+}
+
+main.contact-us {
+    padding: 10rem 0;
+}
+
+main.contact-us .container {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+form.contact-form {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas: 
+        'name phone'
+        'email email'
+        'message message'
+        'button button';
+}
+
+.name-input-1, .phone-input-2, .email-input-3, .message-input-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-input-1 {
+    grid-area: name;
+}
+
+.phone-input-2 {
+    grid-area: phone;
+}
+
+.email-input-3 {
+    grid-area: email;
+}
+
+.message-input-4 {
+    grid-area: message;
+}
+
+.contact-form .orange-button {
+    grid-area: button;
+    width: 33.333%;
+    letter-spacing: .1rem;
+    padding: 2rem 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1.5rem .5rem;
+    border-radius: .5rem;
+    border: .2rem solid #c6ced6;
+    margin: 1rem 0;
+    transition: .3s;
+    font-size: 1.6rem;
+    color: #495057;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #e74208;
+}
+
+.contact-form label {
+    font-size: 1.4rem;
+}
+
+.contact-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-address div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.contact-address div:nth-of-type(1) {
+    margin-top: 0;
+}
+
+.contact-address i {
+    color: #e74208;
+}
+
+.contact-address p {
+    color: #000;
+    font-size: 1.8rem;
+    margin: 1rem 2rem;
+    width: 30rem;
+}
+
+.custom-arrow-2.right-arrow-2 {
+    right: 47%;
+    left: 53%;
+}
+
+.custom-arrow-2.left-arrow-2 {
+    left: 48%;
+    right: 52%;
+}
+
+.custom-arrow-2 {
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.slick-disabled {
+    opacity: .2;
 }
