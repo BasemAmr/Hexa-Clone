@@ -1032,3 +1032,35 @@ input:focus, textarea:focus {
 .slick-disabled {
     opacity: .2;
 }
+
+
+@media (max-width: 768px) {
+    nav .container {
+        grid-template-areas: 
+            'logo toggeler'
+            '_menu _menu'
+    }
+    .menu {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        transition: .5s all;
+    }
+    .active-menu {
+        grid-area: _menu;
+        margin: 1rem 2.5rem;
+        opacity: 1;
+        height: 30vw;
+    }
+    .logo {
+        grid-area: logo;
+    }
+    .nav-toggler {
+        display: block;
+        grid-area: toggeler;
+    }
+}

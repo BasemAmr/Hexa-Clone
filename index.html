@@ -295,6 +295,22 @@
                 nextArrow:".right-arrow-2",
                 speed: 200
             });
+            const toggelMenu = () => {
+                const button = $('.nav-toggeler');
+                const menu = $('.menu');
+                $(button).click(function(){
+                    if($(menu).hasClass('active-menu')){
+                        $(menu).removeClass('active-menu')    
+                    } else {
+                        $(menu).addClass('active-menu')
+                    }
+                })
+            }
+            $(window).resize(()=>{
+                if($(window).width() >= 768) {
+                    toggelMenu();
+                }
+            })
         });
 
     </script>
