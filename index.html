@@ -14,7 +14,7 @@
     <body>
         <!-- Start The Navigation Bar -->
         <nav>
-            <div class="container">
+            <div class="container nav-container">
                 <div class="logo"><!-- Logo -->
                     <h1>Hexa</h1>
                 </div>
@@ -96,14 +96,14 @@
                         <h1 class="main-heading">Let's Build Togethar</h1>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     </div>
-                    <div class="work1-image">
+                    <div class="work1-image work-image">
                         <img src="images/work-1.jpg" alt="">
                     </div>
                 </div>
             </section>
             <section>
                 <div class="container">
-                    <div class="work2-image">
+                    <div class="work2-image work-image">
                         <img src="images/work-2.jpg" alt="">
                     </div>
                     <div class="work2-text work-text">
@@ -293,7 +293,25 @@
                 slidesToScroll: 1,
                 prevArrow:".left-arrow-2",
                 nextArrow:".right-arrow-2",
-                speed: 200
+                speed: 200,
+                responsive: [
+                                {
+                                    breakpoint: 850,
+                                    settings: {
+                                        centerMode: true,
+                                        slidesToShow: 2,
+                                        slidesToScroll: 1 }
+                                },
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        centerMode: true,
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                        mobileFirst: true
+                                }
+                            }
+                        ]
             });
             const toggelMenu = () => {
                 const button = $('.nav-toggeler');

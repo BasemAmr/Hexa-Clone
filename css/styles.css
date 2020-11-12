@@ -1033,12 +1033,17 @@ input:focus, textarea:focus {
     opacity: .2;
 }
 
+@media (max-width: 850px) {
+    .container {
+        width: 80rem
+    }
+}
 
 @media (max-width: 768px) {
     nav .container {
         grid-template-areas: 
             'logo toggeler'
-            '_menu _menu'
+            '_menu _menu';
     }
     .menu {
         height: 0;
@@ -1062,5 +1067,33 @@ input:focus, textarea:focus {
     .nav-toggler {
         display: block;
         grid-area: toggeler;
+    }
+    .container:not(.nav-container) {
+        width: 38rem;
+    }
+    main.services .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .work {
+        grid-gap: 0;
+    }
+    .work section .container {
+        display: grid;
+        grid-auto-columns: 100%;
+        grid-template-rows: 1fr .4fr;
+    }
+    .work section .work-text, .work section .work-image {
+        width: auto;
+    }
+    .work .work-text p {
+        text-align: justify;
+    }
+    .images {
+        text-align: center;
+    }
+    .projects .container .images .hover-text {
+        left: 10.5%;
+        right: 89.5%;
     }
 }
