@@ -1033,11 +1033,11 @@ input:focus, textarea:focus {
     opacity: .2;
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
     .container {
         width: 80rem
     }
-}
+} */
 
 @media (max-width: 768px) {
     nav .container {
